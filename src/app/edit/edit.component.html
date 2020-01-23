@@ -1,0 +1,93 @@
+<mat-card [ngStyle]="{'background-color':'gray'}">
+    <mat-card-title>Update Drive</mat-card-title>
+  <mat-card-content>
+  <form>
+  <p>
+      <mat-form-field appearance="Company Name">
+        <mat-label>Company Name</mat-label>
+        <input matInput placeholder="Placeholder" name="company_Name" [(ngModel)]="tpobj.company_Name">
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="No of Resources">
+        <mat-label>No of Resources</mat-label>
+        <input matInput placeholder="Placeholder" name="resources" [(ngModel)]="tpobj.resources">
+        
+        
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="Exp Required">
+        <mat-label>Exp Required</mat-label>
+        <input matInput placeholder="Placeholder" name="experience" [(ngModel)]="tpobj.experience">
+        
+        
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="CTC">
+        <mat-label>CTC</mat-label>
+        <input matInput placeholder="Placeholder" name="ctc" [(ngModel)]="tpobj.ctc">      
+      </mat-form-field>
+    </p>
+    
+    <mat-form-field>
+      <select placeholder="Joining Criteria" name="joiningc" [(ngModel)]="tpobj.joiningc" matNativeControl required >
+        <option value="0">No Training & direct joining</option>
+        <option value="1">Internship and DirectJoining</option>
+  
+      </select>
+    
+      <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+    </mat-form-field>
+  
+  
+    <p>
+      <mat-form-field appearance="Bond">
+        <mat-label>Bond</mat-label>
+        <input matInput placeholder="Placeholder" name="bond" [(ngModel)]="tpobj.bond">
+    
+        
+      </mat-form-field>
+    </p>
+    
+  
+    <mat-form-field>
+      <select placeholder="Position" name="position" [(ngModel)]="tpobj.position" matNativeControl required >
+        <option value="0">UIDeveloper</option>
+        <option value="1">Backend</option>
+        <option value="2">Tester</option>
+        <option value="3">softwareEngg</option>
+      </select>
+      
+      <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+    </mat-form-field>
+  
+    <p>
+      <mat-form-field appearance="FollowUp">
+        <mat-label>FollowUp</mat-label>
+        <input matInput placeholder="Placeholder" name="followup" [(ngModel)]="tpobj.followup">
+        
+      
+        
+      </mat-form-field>
+    </p>
+    
+    <mat-form-field>
+      <select placeholder="Education Criteria " name="educationc" [(ngModel)]="tpobj.educationc" matNativeControl required>
+        <option value="0">12th</option>
+        <option value="1">BE</option>
+        <option value="2">ME</option>
+        
+      </select>
+     
+      <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+    </mat-form-field>
+  
+    <div class="button">
+      <button type="submit"(click)="updatedata()" mat-raised-button  color ="primary">update</button>
+    </div>
+  
+  </form>
+  </mat-card-content>
+  </mat-card>

@@ -1,0 +1,40 @@
+<h2>View Drive Data</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Company Name</th>
+        
+             <th>No.Of Resources</th>
+            <th>Exp required </th>
+            <th>CTC</th>
+            <th>Joining Criteria</th>
+            <th>Bond</th>
+            <th>Position</th>
+            <th>Follow Up</th>
+            <th>Education Criteria</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of data;let i=index">
+            <td>{{e.d_id}}</td>
+            
+                <td>{{e.company_Name}}</td>
+                <td>{{e.resources}}</td>
+                <td>{{e.experience}}</td>
+                <td>{{e.ctc}}</td>
+                <td>{{e.joiningc}}</td>
+                <td>{{e.bond}}</td>
+                <td>{{e.position}}</td>
+                <td>{{e.followup}}</td>
+                <td>{{e.educationc}}</td>
+                <td>
+                    <a class="btn btn-success" [routerLink]="['/xyz',e.d_id]">Edit</a>
+                    <a class="btn btn-danger" (click)="deleteData(e.d_id)">Delet</a>
+                </td>
+
+ </tr>
+    </tbody>
+
+</table>
